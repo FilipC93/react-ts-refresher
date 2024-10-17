@@ -11,6 +11,7 @@ const NewGoal = ({ onAddingGoal }: newGoalProps) => {
     e.preventDefault()
     const enteredGoal = goalRef.current!.value
     const enteredSummary = summaryRef.current!.value
+    e.currentTarget.reset()
     onAddingGoal(enteredGoal, enteredSummary)
   }
 
